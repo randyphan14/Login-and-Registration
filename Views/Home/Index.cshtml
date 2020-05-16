@@ -1,0 +1,29 @@
+﻿@using LoginAndRegistration.Models
+@model User
+
+<h1>Register to this Cool Site!</h1>
+<a href="login">Login</a><br>
+
+<form asp-action="create" asp-controller="Home" method="POST">
+    <span asp-validation-for="FirstName"></span>
+    <label asp-for="FirstName"></label>
+    <input type="text"asp-for="FirstName">
+
+    <span asp-validation-for="LastName"></span>
+    <label asp-for="LastName"></label>
+    <input type="text"asp-for="LastName">
+
+    <span asp-validation-for="Email"></span>
+    <label asp-for="Email"></label>
+    <input type="text"asp-for="Email">
+
+    <span asp-validation-for="Password"></span>
+    <label asp-for="Password"></label>
+    <input type="password" asp-for="Password">
+
+    <span asp-validation-for="Password2"></span>
+    <label asp-for="Password2"></label>
+    <input type="password" asp-for="Password2">
+
+    <button type="submit">Sign Up Now</button>
+</form>
